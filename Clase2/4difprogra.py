@@ -13,13 +13,13 @@ import os
 # else:
 #    print("I don't know that animal")
 
-#modular programing
-
+ #modular programing
+#
 # animals = {'gato':4,'perro':4,'spider':8}
 #
 # def getName():
-#     animal = input('Write the name of the animal: ')
-#     return animal
+#      animal = input('Write the name of the animal: ')
+#      return animal
 #
 # def setAnimal(animal):
 #     if animal not in animals:
@@ -32,12 +32,12 @@ import os
 # def describeAnimal(animallegs):
 #     print('This animal has '+str(animallegs)+' legs. ' )
 #
-# animal = getName()
-# animallegs  = setAnimal(animal)
-# if animallegs > 0:
-#     describeAnimal(animallegs)
-#
-#Object Oriented Programming
+# variableanimal = getName()
+# variableanimallegs  = setAnimal(variableanimal)
+# if variableanimallegs > 0:
+#     describeAnimal(variableanimallegs)
+# #
+ #Object Oriented Programming
 
 class Animal(object):
 
@@ -61,4 +61,4 @@ animal = Animal()
 print(animal.name)
 animal.setAnimal()
 if animal.animallegs > 0:
-    animal.describeAnimal()
+     animal.describeAnimal()
