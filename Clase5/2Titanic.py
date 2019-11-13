@@ -8,7 +8,7 @@ import pandas as pd
 #importemos (carguemos en memoria) la data
 #pandas carga la data como un dataframe o matriz, tal como si tuvieramos un spreadsheet
 
-data = pd.read_csv('titanic.csv')
+data = pd.read_csv('2titanic.csv')
 
 #previsualicemos la data
 data.head()
@@ -71,7 +71,7 @@ pclass_gender_survival_count_df
 
 import matplotlib.pyplot as plt
 
- 
+
 fig = plt.figure(figsize=(30,10)) #creamos un canvas o figura de 30x10 pixeles
 
 # queremos ver un plot al costado del otro, para esto pensemos en una grilla (celdas)
@@ -91,7 +91,7 @@ plt.show()
 
 #Sobrevivieron mas hombres o mas mujeres?
 fig = plt.figure(figsize=(30,10))
-data.Sex[data.Survived == 1].value_counts(normalize = True).plot(kind='barh', alpha=0.5, color='br')
+data.Sex[data.Survived == 1].value_counts(normalize = True).plot(kind='barh', alpha=0.5)
 plt.title('Sobrevivieron - Male vs Female -')
 plt.show()
 
@@ -101,7 +101,7 @@ plt.show()
 # La clase del ticket fue un factor de sobrevivencia (si viste Titanic, ya lo sabes!)
 fig = plt.figure(figsize=(10,5))
 #colors bgrcmykw
-data.Pclass[data.Survived == 1 ].value_counts(normalize = True).plot(kind='bar', alpha=0.5, color='rby')
+data.Pclass[data.Survived == 1 ].value_counts(normalize = True).plot(kind='bar', alpha=0.5)
 plt.title('Sobrevivientes por Clase de Ticket')
 plt.show()
 
@@ -114,14 +114,14 @@ fig = plt.figure(figsize=(20,10))
 
 for t_class in [1,2,3]:
     data.Age[data.Pclass == t_class].plot(kind='kde')
-    
-plt.legend(("1ra. Clase", "2da. Clase", "3ra.Clase"))  
+
+plt.legend(("1ra. Clase", "2da. Clase", "3ra.Clase"))
 plt.show()
 
 # La linea de la 1ra clase, nos muestra que el promedio de edad del comprador es de 40 annios
 # La linea de la 3ra clase, tiene un promedio mucho mas joven
 
-# Podriamos hacer una inferencia temprana y decir que los hombres que salvaron fueron 
+# Podriamos hacer una inferencia temprana y decir que los hombres que salvaron fueron
 # en su mayoria ricos y > 30 annios
 
 
@@ -131,6 +131,3 @@ data[data.Age < 1]
 
 
 # In[ ]:
-
-
-
